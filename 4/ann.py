@@ -45,7 +45,7 @@ for i in range(epoch):
   
   # To stabilize our neural network, we have to backpropogate - calculate error terms and update weight values
   
-  # BACKPROPOGATION 
+  # BACKPROPAGATION 
   ''' Propogate the errors backward through the network
       For each network output unit k, calculate its error term 𝛿k
       𝛿k <- ok(l - ok)(tk - ok) '''
