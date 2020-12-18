@@ -1,5 +1,5 @@
-''' Q.1) Implement and demonstrate the FIND-S Algorithm for finding the most specific hypothesis based on a given
-         set of training data samples. Read the training data from a .CSV file. '''
+''' Q.1) Implement and demonstrate the FIND-S Algorithm for finding the most specific hypothesis based on a given set of training data samples. 
+         Read the training data from a .CSV file. '''
 
 import csv
 
