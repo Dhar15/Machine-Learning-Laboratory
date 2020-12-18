@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 18 16:18:20 2020
-
-@author: kshit
-"""
-
 ''' Q.5) Write a program to implement the naïve Bayesian classifier for a sample training data set
          stored as a .CSV file. Compute the accuracy of the classifier, considering few test data sets. '''
          
@@ -101,5 +94,3 @@ for i in test.index:
   b.append(classify(test.loc[i,features]) == test.loc[i,target])
 print(sum(b),"correct out of",len(test))
 print("Accuracy:",sum(b)/len(test))
-
-      
