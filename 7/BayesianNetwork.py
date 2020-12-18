@@ -1,6 +1,5 @@
-''' Q.7) Write a program to construct a Bayesian network considering medical data. Use this model
-         to demonstrate the diagnosis of heart patients using standard Heart Disease Data Set. You
-         can use Java/Python ML library classes/API.'''
+''' Q.7) Write a program to construct a Bayesian network considering medical data. Use this model to demonstrate the diagnosis of heart patients using 
+         standard Heart Disease Data Set. You can use Java/Python ML library classes/API.'''
          
 # A Bayesian Network is a type of Graphical Model that that represents a set of variables and their conditional
 # dependencies via a directed acyclic graph (DAG). 
