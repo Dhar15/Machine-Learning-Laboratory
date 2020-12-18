@@ -5,6 +5,7 @@ import csv
 data = []
 print("\n The given training data set is- \n")
 
+# Read dataset row-wise and add to the list data
 with open('ENJOYSPORT.csv', 'r') as csvFile:
   reader = csv.reader(csvFile)
   for row in reader:
