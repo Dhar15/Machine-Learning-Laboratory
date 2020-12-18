@@ -1,12 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 18 23:08:49 2020
-
-@author: kshit
-"""
-
-''' Q.10) Implement the non-parametric Locally Weighted Regression algorithm in order to fit data points. Select 
-          appropriate data set for your experiment and draw graphs.'''
+''' Q.10) Implement the non-parametric Locally Weighted Regression algorithm in order to fit data points. Select appropriate data set for your experiment and draw graphs. '''
           
 ''' Locally weighted linear regression is a non-parametric supervised learning algorithm, that is, the model does not learn a fixed set of parameters 
     as is done in ordinary linear regression. Rather parameters θ are computed individually for each query point x. While computing 
