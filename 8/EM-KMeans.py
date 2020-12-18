@@ -1,14 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 18 20:35:30 2020
-
-@author: kshit
-"""
-
-''' Q.8) Apply EM algorithm to cluster a set of data stored in a .CSV file. Use the same data set for
-         clustering using k-Means algorithm. Compare the results of these two algorithms and
-         comment on the quality of clustering. You can add Java/Python ML library classes/API in
-         the program. '''
+''' Q.8) Apply EM algorithm to cluster a set of data stored in a .CSV file. Use the same data set for clustering using k-Means algorithm. Compare the results of these two 
+         algorithms and comment on the quality of clustering. You can add Java/Python ML library classes/API in the program. '''
          
 ''' THEORY :
   Expectation-Maximization(EM) algorithm is used for latent variables(variables that are not directly observable and are actually inferred 
