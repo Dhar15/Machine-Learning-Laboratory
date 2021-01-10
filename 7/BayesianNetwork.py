@@ -31,9 +31,9 @@ print('\nAttributes and data types-')
 print(heartDisease.dtypes)
 
 # Model a Bayesian Network
-model = BayesianModel([('age', 'trestbps'), ('age', 'fbs'), ('sex', 'trestbps'),
-('exang', 'trestbps'), ('trestbps', 'heartdisease'),
-('fbs', 'heartdisease'), ('heartdisease', 'restecg'), ('heartdisease', 'thalach'),
+model = BayesianModel([('age', 'heartdisease'), ('fbs', 'heartdisease'), ('sex', 'heartdisease'),
+('cp', 'heartdisease'), ('trestbps', 'heartdisease'),
+('heartdisease', 'restecg'), ('heartdisease', 'thalach'),
 ('heartdisease', 'chol')])
 
 # Learning CPD's (Conditional Probability Distribution) using Maximum Likelihood Estimators
@@ -48,6 +48,6 @@ print('\n1.Probability of HeartDisease given Age = 20')
 q = HeartDisease_infer.query(variables=['heartdisease'], evidence={'age': 20})
 print(q)
 
-# print('\n2. Probability of HeartDisease given chol (Cholestoral) = 100')
-# q = HeartDisease_infer.query(variables=['heartdisease'], evidence={'sex': 0, 'chol': 100})
-# print(q)
+print('\n2. Probability of HeartDisease given cp (Chest pain) = 2')
+q = HeartDisease_infer.query(variables=['heartdisease'], evidence={'cp': 2})
+print(q)
