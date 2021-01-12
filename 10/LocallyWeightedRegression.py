@@ -14,20 +14,20 @@ def kernel(point, xmat, k):
   weights = np.mat(np.eye((m)))     # eye() returns a 2-D array with ones on the diagonal and zeros elsewhere.
   for j in range(m):
     diff = point - X[j]
-    weights[j,j] = np.exp(diff * diff.T / (-2.0 * k ** 2))
+    weights[j,j] = np.exp(diff * diff.T / (-2.0 * k ** 2))        # Kernel Smoothing - our weight matrix is calculated using a function D = e^((X-X0) / (-2 * k²))
     
   return weights
 
 def localWeight(point, xmat, ymat, k):
-  weight = kernel(point, xmat, k)
-  W = (X.T * (weight*X)).I * (X.T * (weight * ymat.T))
+  weight = kernel(point, xmat, k)       
+  W = (X.T * (weight*X)).I * (X.T * (weight * ymat.T))            # Once we have our weight matrix(say W), our model parameter is calculated as  β = (X' * W * X)^-1 * (X' * W * Y)          
   return W
-
+          
 def localWeightRegression(xmat, ymat, k):
   m,n = np.shape(xmat)
   ypred = np.zeros(m)
   for i in range(m):
-    ypred[i] = xmat[i] * localWeight(xmat[i], xmat, ymat, k)
+    ypred[i] = xmat[i] * localWeight(xmat[i], xmat, ymat, k)      # To get the predictions, we multiply our β with input parameter.  ŷ = β * X0
     
   return ypred
 
@@ -44,10 +44,10 @@ ones = np.mat(np.ones(m))          # Matrix of 1's of same shape.
 
 X = np.hstack((ones.T, mbill.T))   # Stack arrays in sequence horizontally (column wise).
 
-yPred = localWeightRegression(X, mtip, 10)
+yPred = localWeightRegression(X, mtip, 10)        
 
-sortIndex = X[:,1].argsort(0)
-xSort = X[sortIndex][:,0]
+sortIndex = X[:,1].argsort(0)       # Indirect sorting using indices
+xSort = X[sortIndex][:,0]           # Sorted data
 
 # Plot the regression graph to view results
 fig = plt.figure()
